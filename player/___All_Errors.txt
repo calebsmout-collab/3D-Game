@@ -1,0 +1,6 @@
+CorrelationId: a470e22c-ee33-4337-a812-fa59418f2e2d
+UTC DateTime: 10/26/2025 22:59:10
+
+The following files/folders have not been downloaded
+0. 3d-game/.godot/editor/favorites.Node
+1. 3d-game/.godot/scene_groups_cache.cfg

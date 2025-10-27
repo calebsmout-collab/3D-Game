@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://b53wd3wsa3emf"]
+
+[ext_resource type="Script" uid="uid://b6vpfat805gvd" path="res://Player.gd" id="1_j4p8b"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pcdjs"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_j4p8b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_pcdjs")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5643795, -0.10227001)
+
+[node name="Reticle" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -39.0
+offset_right = 39.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="gun_model" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+transform = Transform3D(-0.50870615, 0, -5.7641063e-08, 0, 0.48361483, 0, 4.4472504e-08, 0, -0.6593369, 0.5731518, -0.14733815, -0.6848813)
+script = null
