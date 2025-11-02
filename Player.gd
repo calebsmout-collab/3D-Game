@@ -17,7 +17,7 @@ func _unhandled_input(event):
 
 
 func _physics_process(delta):
-	const SPEED = 5.5
+	const SPEED = 8.5
 	
 	var input_direction_2D = Input.get_vector(
 		"move_left", "move_right", "move_forward", "move_back"
@@ -37,3 +37,16 @@ func _physics_process(delta):
 		velocity.y = 0.0
 	
 	move_and_slide()
+	
+	if Input.is_action_just_pressed("shoot") and %Timer.is_stopped():
+		shoot_bullet()
+
+
+func shoot_bullet():
+	const BULLET_3D = preload("uid://pqp81inj573n")
+	var new_bullet = BULLET_3D.instantiate()
+	%Marker3D.add_child(new_bullet)
+	
+	new_bullet.global_transform = %Marker3D.global_transform
+	
+	%Timer.start()
