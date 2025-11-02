@@ -43,7 +43,7 @@ func _physics_process(delta):
 
 
 func shoot_bullet():
-	const BULLET_3D = preload("uid://pqp81inj573n")
+	const BULLET_3D = preload("res://player/bullet_3d.tscn")
 	var new_bullet = BULLET_3D.instantiate()
 	%Marker3D.add_child(new_bullet)
 	

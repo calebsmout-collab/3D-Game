@@ -24,4 +24,6 @@ func do_poof(_mob_global_position):
 	_poof.global_position = _mob_global_position
 
 func _on_kill_plane_body_entered(_body):
-	get_tree().reload_current_scene()
+	
+	call_deferred("get_tree().reload_current_scene()")
+	

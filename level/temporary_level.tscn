@@ -55,6 +55,7 @@ transform = Transform3D(0.9946037, 0, 0.10374733, 0, 1, 0, -0.10374733, 0, 0.994
 script = ExtResource("1_q5axl")
 
 [node name="KillPlane" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.1515303, 0)
 collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="KillPlane"]
@@ -62,7 +63,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.259403, 0)
 shape = SubResource("WorldBoundaryShape3D_q5axl")
 
 [node name="MobSpawner3D" parent="." instance=ExtResource("3_gmctb")]
-transform = Transform3D(-0.029107973, 0, -0.9995763, 0, 1, 0, 0.9995763, 0, -0.029107973, -0.69936216, 0.5000005, 25.048002)
+transform = Transform3D(-0.99309105, 0, -0.11734671, 0, 1, 0, 0.11734671, 0, -0.99309105, -0.69936216, 0.5000005, 25.048006)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_pev5d")
