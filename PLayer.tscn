@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b53wd3wsa3emf"]
+[gd_scene load_steps=5 format=3 uid="uid://b53wd3wsa3emf"]
 
 [ext_resource type="Script" uid="uid://b6vpfat805gvd" path="res://Player.gd" id="1_j4p8b"]
 [ext_resource type="PackedScene" uid="uid://chjrhhjvxun3r" path="res://player/simple_gun/gun_model.glb" id="2_j4p8b"]
+[ext_resource type="AudioStream" uid="uid://bi6ansiu0g7gi" path="res://player/gun_shoot.wav" id="3_elase"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pcdjs"]
 
@@ -21,9 +22,13 @@ transform = Transform3D(-0.64204997, 0, 0.020244593, 0, 0.57813215, 0, -0.020244
 
 [node name="Marker3D" type="Marker3D" parent="Camera3D"]
 unique_name_in_owner = true
-transform = Transform3D(-0.64204985, 8.267989e-05, 0.020244423, -2.0641618e-10, 0.57812744, -0.002361126, -0.020244593, -0.0026221706, -0.6420446, 0.72457796, -0.21055472, -1.044564)
+transform = Transform3D(0.64204973, -8.268013e-05, -0.020244483, -2.1584329e-10, 0.5781274, -0.0023611262, 0.020244652, 0.0026221706, 0.6420446, 0.72457796, -0.21055472, -1.0445638)
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 0.2
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_elase")
